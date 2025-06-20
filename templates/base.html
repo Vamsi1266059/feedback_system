@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- External CSS (optional, if using your own style file) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4f46e5;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e0e7ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a>
+        <a href="{{ url_for('feedback') }}"><i class="fas fa-pen"></i> Feedback</a>
+        <a href="{{ url_for('admin_login') }}"><i class="fas fa-user-shield"></i> Admin</a>
+        <a href="{{ url_for('contact') }}"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Feedback System</h1>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Feedback System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

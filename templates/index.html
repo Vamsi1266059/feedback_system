@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Feedback System</title>
+    <style>
+        .welcome-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .welcome-container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .link-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-button:hover {
+            background-color: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome to the Feedback System</h2>
+        <a class="link-button" href="{{ url_for('feedback') }}">Submit Feedback</a>
+        <a class="link-button" href="{{ url_for('admin_login') }}">Admin Login</a>
+    </div>
+</body>
+</html>
+{% endblock %}

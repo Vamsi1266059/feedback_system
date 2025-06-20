@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Your Feedback</h2>
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" required><br>
+
+            <label>Message:</label><br>
+            <textarea name="message" rows="5" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
